@@ -1,0 +1,22 @@
+#include<iostream>
+
+int main()
+{ 
+	
+	double w, x, y, z;
+	cout << " Enter the first number: ";
+	cin >> w;
+	cout << " Enter the second number: ";
+	cin >> x;
+	cout << " Enter the third number: ";
+	cin >> y;
+	cout << " Enter the fourth number: ";
+	cin >> z;
+	cout << " The average of these numbers is: " << (x + w + y + z) / 4 << endl;
+	system("pause");
+	return 0;
+
+
+}
+//int double string char are basic simple data type
+//cin mean that you have press a number or letter (Depend on the data type) to put in the data.
