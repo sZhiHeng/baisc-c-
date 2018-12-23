@@ -1,0 +1,50 @@
+/*
+Write a program that declares a two-dimensional array named myFancyArray of the type
+double. Initialize the array to the following values:
+23 14.12 17 85.99
+6.06 13 1100 0
+36.36 90.09 3.145 5.4
+1. Create a function that will return the sum of all elements in the array.
+Call this function from main and print out the result.
+2. Create a function that will use a nested loop to display all the elements in the array to
+the screen. Call this function from main.
+
+*/
+
+#include<iostream>
+using namespace std;
+double sum(double[3][4]);
+void display(double[3][4]);
+int main()
+{
+	double x[3][4] =
+	{ {23.0,14.12,17,85.99},{6.06, 13.0,1100.0,0.0},{36.36,90.09,3.145,5.4} };
+	cout << "sum of elements is: ";
+	display(x);
+	cout << "sum of elements is: " << sum(x);
+	system("pause");
+	return 0;
+}
+
+double sum(double x[3][4])
+{
+	double sum1 = 0;
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			sum1 += x[i][j];
+		}
+	}
+	return sum1;
+}
+void display(double x[3][4])
+{
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			cout << x[i][j] << ' ';
+		}
+	}
+}
