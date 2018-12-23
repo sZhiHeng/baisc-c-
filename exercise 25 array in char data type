@@ -1,0 +1,67 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+/*
+DNA is made up from 4 different bases(nucleotides), adenine(A), thymine(T), guanine(G) and
+cytosine(C).This is true for plants, animals, bacteria, in fact it is true all life forms on earth that
+contain DNA.
+In an incredible molecular feat called transcription, your cells create molecules of messenger
+RNA that mirror the sequence of nucleotides in your DNA.The RNA then creates proteins that
+do the work of the cell.
+Create a function called dna_to_rna, which should take as input a string which will have DNA
+nucleotides(capital letter As, Cs, Gs, and Ts).There may be other characters, too; they should be
+ignored by your transcribe function and disappear from the output.These might be spaces or
+other characters that are not DNA nucleotides.
+Then, dna_to_rna should output the messenger RNA that would be produced from that DNA
+string.The correct output simply uses replacement :
+• As in the input become Us in the output.
+• Cs in the input become Gs in the output.
+• Gs in the input become Cs in the output.
+• Ts in the input become As in the output.
+• any other input characters should disappear from the output altogether
+Not quite working ? One common problem that can arise is that dna_to_rna needs to have an
+ELSE to capture all of the non - legal characters.All non - nucleotide characters should be dropped.
+Here are the tests to check :
+ACGTTGCA should be transformed into UGCAACGU
+ACG TGCA should be transformed into UGCACGU
+GATTACA should be transformed into CUAAUGU
+A 42% should be transformed into U
+*/
+void dna_to_rna(char arr[],int length);
+int main()
+{
+	char DNA[10];
+	
+	
+	cout << "Please enter the container of the 10 DNA codes: ";
+	
+	cin.get(DNA,10);
+
+	int length = strlen(DNA);
+
+	dna_to_rna(DNA,length);
+	cout << endl;
+	system("pause");
+	return 0;
+
+}
+void dna_to_rna(char arr[], int length)
+{
+	cout << "The RNA code is: ";
+	for (int i = 0; i < length; i++)
+	{
+	
+		if (arr[i] == 'A')
+			arr[i] = 'U';
+		else if (arr[i] == 'C')
+			arr[i] = 'G';
+		else if (arr[i] == 'G')
+			arr[i] = 'C';
+		else if (arr[i] == 'T')
+			arr[i] = 'A';
+		else
+			continue;
+
+		cout << arr[i];
+	}
+}
