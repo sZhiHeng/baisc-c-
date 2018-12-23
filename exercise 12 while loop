@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+/*Create a program to calculate how many months and years it will take for a user to pay off
+his/her student loan.
+Ask the user to input the total amount of money owed 
+in student loan debt, the annual interest rate being charged, 
+and how much will be paid each month towards it. 
+(HINT: You will need to handle having an annual interest rate
+calculate the amount of interest to be charged monthly. Simply divide the annual by 12). 
+Display a message informing the user how many months it will take until the loan is fully paid off.*/
+int main()
+{
+	double remainLoan;
+	double monthInter;
+	int month=0;
+	double interest;
+	double pay;
+	cout << "Enter your remain loan(owe): ";
+	cin >> remainLoan;
+	cout << "Enter your annual interest rate: ";
+	cin >> interest;
+	cout << "Enter your pay: ";
+	cin >> pay;
+	while (remainLoan > 0)
+	{
+		month++;
+		monthInter = interest / 12;
+		remainLoan =remainLoan+(remainLoan * monthInter);
+		remainLoan -= pay;
+		cout << "month: " << month << "\tyou paid: " << monthInter << " now you have remain loan: $" << remainLoan << endl;
+		if (remainLoan < 0)
+		{
+			cout << "you pay off the loan! And you have remain money of: $" << remainLoan * -1<<" from the payment" << endl;
+			remainLoan = 0;
+		}
+	}
+	cout << "you need at least " << month << " month to paid off the loan" << endl;
+	system("pause");
+	return 0;
+}
+
+//while loop was almost same as for loop
+//while loop also are loop version of if statement
