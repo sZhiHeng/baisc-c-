@@ -13,8 +13,14 @@ int main()
 	return 0;
 }
 
+
+/*#include<iostream>  represent the header file
+using namespace std is a basic requirement if you want to print something. 
+otherwise, you need to code out cout and cin as std:: cout or cin instead.
+*/
 //output should be following
-/****************************************************
+/*
+****************************************************
                         Welcome!
 
 Please choose a number from the following options :
