@@ -23,3 +23,8 @@ int main()
 	system("pause");
 	return 0;
 }
+
+//you also can declear data type in the for loop
+//example
+//for( int i =0 ; i<3 ; i++)
+//for loop create by 3 parts, each part ended by ';'
