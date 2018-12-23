@@ -1,0 +1,39 @@
+/*A car dealership has 10 salespeople. The dealership keeps track of the number of cars
+sold by each salesperson each month and reports it to management. The management
+then takes that data and assigns a number 1 – 10 to each salesperson. The following
+statement declares an array to store the number of cars sold by each salesperson (it
+means that salesperson #1 sold 7 cars, salesperson #2 sold 3 cars, etc):
+int cars[10] = {7, 3, 6, 0, 14, 8, 1, 2, 9, 8};
+Output
+1) the total number of cars sold at the entire dealership,
+2) which salesperson sold the most cars (Salesperson #1, Salesperson #2, etc.), and
+3) how many cars that best salesperson sold.
+*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int salesPeople[10];
+	int sum = 0;
+	cout << "Management please the number of cars they sold in each person(total 10 person): " << endl;
+	int greatestPeople = 0;
+	for (int i = 0; i < 10; i++)
+	{
+		cin >> salesPeople[i];
+		sum += salesPeople[i];
+	}
+	int greatest = salesPeople[0];
+	for (int i = 0; i < 10; i++)
+	{
+		if (greatestPeople < salesPeople[i])
+		{
+			greatestPeople = salesPeople[i];
+			greatest = i;
+		}
+	}
+	cout << "Totally sold: " << sum << " of cars."<<endl;
+	cout << "Salesperson# " << greatest+1 << " sold most car.( Sold " << greatestPeople << " numbers of car)."<<endl;
+	system("pause");
+	return 0;
+}
