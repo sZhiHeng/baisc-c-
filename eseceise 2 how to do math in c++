@@ -13,6 +13,14 @@ int main()
 	//system("pause");
 	return 0;
 }
+
+
+/*
+you should know it's value assign into the memory location.
+for example 
+x=88
+it's 88 assigns into the x and x is the memory location.
+*/
 //output should be following
 
 /*The sum of those number is: 3344.
