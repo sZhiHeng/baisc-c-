@@ -1,0 +1,30 @@
+/*Write a program that declares an array named myArray with 8 components of the type
+int. Initialize the array to 8 values that the user inputs (remember to prompt the user).
+Finally, pass the array as a parameter to a new function called filterEvens. This new
+function will display all of the even numbers in the array*/
+#include<iostream>
+using namespace std;
+void filterEvens(int arr[]);
+int main()
+{
+	int myArray[8];
+	cout << "Please enter 8 number for the array element: " << endl;
+	for (int i = 0; i < 8; i++)
+	{
+		cin >> myArray[i];
+	}
+	filterEvens(myArray);
+		system("pause");
+		return 0;
+}
+void filterEvens(int arr[])
+{
+	cout << "The even numbers are: ";
+	for (int i = 0; i < 8; i++)
+	{
+		if (arr[i] % 2 == 0)
+		{
+			cout  << arr[i] << " ";
+		}
+	}
+}
