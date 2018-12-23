@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+/*Write a program that displays the sum of all integers between 0 and 100 (inclusive).
+Then display the sum of all even integers between 0 and 100 (inclusive).
+Then display the sum of all odd integers between 0 and 100 (inclusive)..*/
+int main()
+
+{
+	int x = 0;
+	int y = 100;
+	int sum = 0;
+	int oddSum = 0;
+	int evenSum = 0;
+	while (x <= y)
+	{
+		if (x % 2 == 1)
+		{
+			oddSum += x;
+		}
+		else if (x % 2 == 0)
+		{
+			evenSum += x;
+		}
+		sum += x;
+		x = x + 1;
+		
+
+	}
+	cout << "sum of all integer between 0-100 is " << sum << endl;
+	cout << "sum of all even integer between 0-100 is " << evenSum << endl;
+	cout << "sum of all odd integer between 0-100 is " << oddSum << endl;
+
+	system("pause");
+	return 0;
+}
+
+//% = modulus in computer language
+//% represent remainder 
+//for example
+// 100/2 = 50
+//with %. 
+// 100%2=0 ; becasue 100 is divisible by 2
+// 5/2= 2.5 but 5%2 =1 because remainder of 5/2 = 1
