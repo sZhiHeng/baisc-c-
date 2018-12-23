@@ -1,0 +1,44 @@
+/*
+Write a program for the IRS that will calculate income tax. You will need as input the person’s
+annual salary. Display a message that says: This year you paid $_______ dollars in
+tax. So your net salary after taxes are taken out is $________.
+Format your output to two decimal places.
+Assume that the tax brackets in the U.S. are as follows:
+Salary Tax Rate
+Under $12,000 6%
+$12,001 – $38,000 27%
+$38,001 – 55,000 33%
+Over $55,000 39%
+*/
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	double tax;
+	double takenOut;
+	cout << "please enter your annual salary: " << endl;
+	cin >> tax;
+	
+	if (tax < 12000)
+	{
+		takenOut = tax * 0.06;
+	}
+	else if (tax >= 120001 && tax <= 38000)
+	{
+		takenOut = tax * 0.27;
+	}
+	else if (tax >= 38001 && tax <= 55000)
+	{
+		takenOut = tax * 0.33;
+	}
+	else
+	{
+		takenOut = tax * 0.39;
+	}
+
+	cout << "This year you paid $" << tax << " dollars in tax."
+		<< "So your net salary after taxes are taken out is $" << takenOut << endl;
+	system("pause");
+	return 0;
+}
