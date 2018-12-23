@@ -1,0 +1,38 @@
+/*Write a program that will generate 1000
+random numbers(all of which are between 10 and 20), and then
+write all of the even numbers(from those 1000 numbers) to a new file called “myEvenRandoms.txt”.*/
+#include<iostream>
+#include<fstream>
+#include<ctime>
+using namespace std;
+int main()
+{
+	srand(time(0));
+	ofstream outData;
+	outData.open("myEvenRandoms.txt");
+	int count = 0;
+	int count2 = 0;
+	int x;
+	while (count != 1000)
+	{
+		
+		x = rand() % 11;
+		x = x + 10;
+		if (x % 2 == 0)
+		{
+			outData << x << " ";
+			count2++;
+			if (count2 % 25 == 0)
+			{
+				outData << endl;
+			}
+		}
+
+		count++;
+	}
+	outData.close();
+	system("pause");
+	return 0;
+}
+// fstream is file header file
+// we have ofstream represen output data, ifstream represent input data.
