@@ -1,0 +1,38 @@
+/*Write a program that will have three functions(printStars, addThem and main) 
+	: The first
+function should be named printStars and will output five stars on a single line.
+The second
+function should be named addThem and will accept two numbers
+(passed as parameters) and
+return the sum.Finally, the main function will :
+1) ask the user to input two numbers,
+2) call the addThem function that will return the sum, and then
+3) execute a loop that will call the printStars function the number of
+times returned by the addThem function.*/
+#include<iostream>
+#include<string>
+using namespace std;
+double addThem(int x, int y);
+string printStars();
+int main()
+{
+	int x, y;
+	cout << "Please input two numbers: ";
+	cin >> x >> y;
+	x = addThem(x, y);
+	for (int i = 0; i < x; i++)
+	{
+		cout << printStars();
+	}
+	cout << endl;
+	system("pause");
+	return 0;
+}
+double addThem(int x, int y)
+{
+	return x + y;
+}
+string printStars()
+{
+	return "***** ";
+}
