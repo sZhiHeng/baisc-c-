@@ -1,0 +1,94 @@
+/*Write a program that can be used to assign seats for a commercial airline. The airplane has 13
+rows, with 6 seats in each row.
+Create a menu-driven program so that the user (in a loop) can choose to display a map of the
+seats, or choose a seat.
+Menu option 1: Display a “map” of all of the seats on the airplane (display a star (*) to indicate
+the seat is available; display an X if the seat is occupied).
+Menu option 2: Ask the user and to select the specific seat he wishes to reserve. Either reserve
+the seat, or tell the user that the request could not be completed.
+You must create this program by writing the following functions:
+displayMap will display the current seating map of the entire airplane
+makeReservation will let the user select the specific seat(s) they wish to reserve, call a function
+validateFunction, and reserve the seat it is available. validateFunction will take the user’s
+selection as a parameter and will return true if the user can reserve the seat and will return false
+if the seat is already taken.
+A B C D E F
+Row 1 * * X * X X
+Row 2 * X * X * X
+Row 3 X * X X
+(etc...)
+*/
+#include<iostream>
+using namespace std;
+void displayMap(char x[13][6]);
+bool validateFunction(char x[][6] ,int , int );
+void makeReservation(char k[][6]);
+char seats[13][6] = {{ '*','*','*','*','*','*' } ,{ '*','*','*','*','*','*' } ,{ '*','*','*','*','*','*' } ,{ '*','*','*','*','*','*' } ,{ '*','*','*','*','*','*' } ,{ '*','*','*','*','*','*' } ,{ '*','*','*','*','*','*' } ,{ '*','*','*','*','*','*' } ,{ '*','*','*','*','*','*' } ,{ '*','*','*','*','*','*' } ,{ '*','*','*','*','*','*' } ,{ '*','*','*','*','*','*' } ,{ '*','*','*','*','*','*' } };
+int main()
+{
+	char x;
+	
+	cout << "Please make choice:\n"
+		<< "menu option 1: display the map\noption 2: select specific seat\npress q to exit" << endl << endl;
+	bool controlLoop = true;
+	while (controlLoop)
+	{
+		cin >> x;
+		if (x == '1')
+		{
+			cout << "The map of whole plane(* indicated seat that you can take X means you cannot take that seat)" << endl;
+			displayMap(seats);
+		}
+		else if (x == '2')
+		{
+			cout << "please enter the row and colum you want to reseve: ";
+			makeReservation(seats);
+		}
+
+		else if (x == 'q')
+		{
+			controlLoop = false;
+		}
+		else
+		{
+			cout << "Please press 1 or 2 for the menue option.";
+		}
+		
+	}
+}
+void displayMap(char x[13][6])
+{
+	for (int i = 0; i < 13; i++)
+	{
+		for (int j = 0; j < 6; j++)
+		{
+			cout << x[i][j];
+		}
+		cout << endl;
+	}
+}
+void makeReservation( char seats[13][6])
+{
+	int row, colum;
+	cin >> row >> colum;
+	if (validateFunction(seats,row,colum) == false)
+	{
+		cout << "The seat is already taken.";
+	}
+	else
+	{
+		cout << "you are successfully reserve the seat.";
+		seats[row][colum] = 'X';
+	}
+}
+bool validateFunction(char m[][6], int l, int y)
+{
+	if (m[l][y] == 'X')
+	{
+		return false;
+	}
+	else
+	{ 
+		return true;
+	}
+}
