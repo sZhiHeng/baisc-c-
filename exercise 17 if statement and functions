@@ -1,0 +1,74 @@
+/
+Create a coin - flipping game.Ask the user how many times to flip the coin,
+and use the random function to determine heads or tails each time a coin is flipped.
+Assume the user starts with $50.Every time the coin is flipped
+calculate the total(heads + $10 ,tails - $10).Create another function to test 
+if the user has gone broke yet(THIS FUNCTION MUST RETURN A BOOLEAN TRUE / FALSE VALUE).
+End the program when the user is broke or
+	when the coin was flipped the number of times the user had specified.
+	Display:
+1) how many times the coin was flipped,
+2) the number of times “heads” was the result,
+3) the number of times “tails” was the result, and
+4) how much money the user has at the end
+*/
+#include <ctime>
+#include <iostream>
+using namespace std;
+bool broke(int money);
+int main()
+{
+	cout << "How many times you wants to fliped the coin :";
+	int x = 0;
+	cin >> x;
+	int count = 0;
+	int z = 0;
+	int money = 50;
+	int head = 0;
+	int tail = 0;
+	srand(time(0));
+	while (count <x)
+	{
+		//srand(time(0));
+		 z = rand()%2 + 1; // 1= head 2=tail
+		 if (z == 1)
+		 {
+			 money = money + 10;
+			 head++;
+		 }
+		 else if (z == 2)
+		 {
+			 money = money - 10;
+			 tail++;
+		 }
+		 if (broke(money))
+		 {
+			 cout << "Coin fliped: " << count << endl;
+			 count = x;
+			 cout << "heads: " << head << endl;
+			 cout << "tails: " << tail << endl;
+			 cout << "You have remain money: $" << money;
+			 cout << "  You do not have remain money, GAME END" << endl;
+		 }
+		 count++;
+	}
+	if (count == x)
+	{
+		cout << "Coin fliped: " << x << endl;
+		cout << "heads: " << head << endl;
+		cout << "tails: " << tail << endl;
+		cout << "You have remain money: $" << money << endl;
+		
+	}
+	system("pause");
+	return 0;
+}
+bool broke(int money)
+{
+	if (money <= 0)
+	{
+		return true;
+	}
+	return false;
+}
+
