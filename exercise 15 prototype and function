@@ -1,0 +1,48 @@
+/*
+/*Write another function called circumference that takes the radius of the circle and returns
+the circle’s circumference.
+The formula for a circumference is : r2
+Write another function called area that takes the radius of the circle and returns the area of the
+circle.
+The formula for the area of the circle is : 2 r
+Exercise*/
+*/
+#include<iostream>
+#include<cmath>
+using namespace std;
+//the function prototype goes here
+const double PI = 3.1415;
+double radius(double x1, double y1, double x2, double y2);
+double circumference(double radius);
+double area(double radius);
+int main()
+{
+	double x1, y1, x2, y2;
+	double r;
+	cout << "Enter 4 numbers corresponding to the ";
+		cout << "coordinates of two points: ";
+	cin >> x1 >> y1 >> x2 >> y2;
+	r = radius(x1, y1, x2, y2);
+	cout << "The radius is: " << r <<endl;
+	double c = circumference(r);
+	double a = area(r);
+	cout << " the circumference is: " << c << endl;
+	cout << " area is: " << a << endl;
+	system("pause");
+	return 0;
+}
+
+double radius(double x1, double y1, double x2, double y2)
+{
+	return	sqrt((pow((x2 - x1), 2) + (pow((y2 - y1), 2))));
+}
+double circumference(double radius)
+{
+	return PI * radius;
+}
+double area(double radius)
+{
+	return PI * (radius *radius);
+}
+/* in c++, you need to do prototype for the funtion
+ otherwise the function would not work, because system does not regonize there's a funtion at the end.
