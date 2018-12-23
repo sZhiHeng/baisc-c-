@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	cout << "***************************************************" << endl 
+		<< "\t\t\tWelcome!                       " << endl << endl
+		<< "Please choose a number from the following options :" << endl << endl
+		<< "1.\tPlay the game! " << endl
+		<< "2.\tDemo the game!" << endl
+		<< "3.\tExit " << endl << endl
+		<< " ****************************************************" endl;
+	system("pause");
+	return 0;
+}
+
+//output should be following
+/****************************************************
+                        Welcome!
+
+Please choose a number from the following options :
+
+1.      Play the game!
+2.      Demo the game!
+3.      Exit
+*/
