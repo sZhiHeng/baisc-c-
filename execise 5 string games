@@ -1,0 +1,51 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+	/*Use strings and user input to create 
+	a Madlib program. Ask the user to enter nouns, 
+	verbs, adjectives, etc., and generate a cohesive
+		story that you will write as output.*/
+
+	string noun, verb, adjective, adjective2, number;
+	cout << "hello! welcome to my story making lab! " << endl <<endl ;
+	cout << "please type verbs, adjectives, and number. So that I can make story for you!" << endl <<endl;
+
+	cout << "noun(name with capital): " ;
+	cin >> noun;
+
+	cout << "\nverb(negative emotion) :" ;
+	cin >> verb;
+
+	cout << "\nadjective : ";
+	cin >> adjective;
+
+	cout << "\nadjective : ";
+	cin >> adjective2;
+
+	/*cout << "\nverb(negative emotion) : ";
+	cin >> verb2;*/
+
+	cout << "\nnumber : ";
+	cin >> number;
+
+	cout << "I am " << adjective << " while I am also " << adjective2 << " so " << noun 
+		<< " please! don't call me againt, you're already called me "
+		<< number << " times!" <<endl <<" You are making me " << verb << "! '' " <<endl;
+	system("pause");
+	return 0;
+}
+
+
+
+//string is a data type that you can type more than one character into the memory location
+//another word, its combine of many 'char'
+//to declear char data type, you using single quotation 
+//example
+// char something = 'x';
+// but with string, you need doube quotation
+//example
+// string somthing= "hello";
