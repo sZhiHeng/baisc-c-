@@ -1,0 +1,51 @@
+/*Write a program using if, else if and else statements that will sort three
+characters in ascending order(smallest to largest).Remember that characters
+are stored in ASCII!Another way of saying this might be to put the characters
+in alphabetical order, but be careful of lowercase versus uppercase values,
+as well as handling special characters(those that are not letters, such as the dollar sign.) 
+Ask the user to input three characters, then ultimately output the same three characters in the correct order.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+	char first, second, third;
+	cout << "please put down the letters: ";
+	cin >> first >> second >> third;
+	cout << "first letter: " << first << endl << "second letter: " << second
+		<< endl << "third letter: " << third << endl;
+	if ((first >= 'A' && first <= 'Z') ||(first >= 'a'&& first <= 'z') 
+		&& (second >= 'A' && second <= 'Z') || (second >= 'a'&& second <= 'z') 
+		&& (third >= 'A'&& third <= 'Z') || (third >= 'a'&& third <= 'z'))
+	{
+		if (first <= second && first <= third)
+		{
+			cout << first << " ";
+			if (second <= third)
+				cout << second << " " << third << endl;
+			else
+				cout << third << " " << second << endl;
+		}
+		else if (second <= first && second <= third)
+		{
+			cout << second << " ";
+			if (first <= third)
+				cout << first << " " << third << endl;
+			else
+				cout << third << " " << first << endl;
+		}
+		else if (third <= first && third <= second)
+		{
+			cout << third << " ";
+			if (second <= first)
+				cout << second << " " << first << endl;
+			else
+				cout << third << " " << first << " " << second << endl;
+		}
+
+	}
+
+
+
+	system("pause");
+	return 0;
+}
