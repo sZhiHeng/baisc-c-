@@ -1,0 +1,30 @@
+/*
+Write a “Choose Your Own Adventure” program.
+Write a cohesive story that allows the user
+to make decisions as to what to do next, and
+display the story accordingly.An example might
+be “A First - time Tourist’s Adventure on the New York City Subway System”.*/
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	string choose, one, two;
+	cout << "This is hungry choose! Are you hungrt?" << endl
+		<< "( type yes ,no , or some other thing to make small story ): ";
+	one = " so go to Mcd or school restaurant";
+	two = " No I am not hungry";
+	cin >> choose;
+	if ( choose == "yes")
+	{
+		cout << one << endl;
+	}
+	else
+	{
+		cout << two << endl;
+	}
+
+	system("pause");
+	return 0;
+
+}
