@@ -1,18 +1,27 @@
 #include<iostream>
 using namespace std;
 int main()
-{ //578, 986, 1066, and 714. 
-	double w, x, y, z, sum;
-	w = 578;
-	x = 986;
-	y = 1066;
-	z = 714;
-	sum = w + x + y + z;
-	cout << "The sum of those number is: " << i << "." << endl << "The average of those number is: "
-		<< sum / 4 << endl;
-	//system("pause");
-	return 0;
+{ 
+//578, 986, 1066, and 714. 
+double w, x, y, z, sum;
+w = 578;
+x = 986;
+y = 1066;
+z = 714;
+sum = w + x + y + z;
+cout << "The sum of those number is: " << i << "." << endl << "The average of those number is: "
+	<< sum / 4 << endl;
+//system("pause");
+return 0;
 }
+
+
+/*
+you should know it's value assign into the memory location.
+for example 
+x=88
+it's 88 assigns into the x and x is the memory location.
+*/
 //output should be following
 
 /*The sum of those number is: 3344.
