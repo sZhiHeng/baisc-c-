@@ -1,0 +1,24 @@
+/*Write a program that declares an array named alpha with 50 components of the type
+double. Initialize the array so that the first 25 components are equal to the square of
+the counter (or index) variable and the last 25 components are equal to three times the
+index variable.
+Output the array so that exactly ten elements per line are printed.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+	double arr[50] = { 0 };
+		for (int i = 0; i < 50; i++)
+		{
+			arr[i] = i*i;
+		}
+		for (int i = 24; i < 50; i++)
+		{
+			arr[i] = 3 * i;
+		}
+		for (int i = 0; i < 50; i++)
+		{
+			cout << arr[i]<<endl;
+		}
+		system("pause");
+		return 0;
