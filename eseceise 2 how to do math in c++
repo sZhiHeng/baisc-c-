@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main()
+{ //578, 986, 1066, and 714. 
+	double w, x, y, z, sum;
+	w = 578;
+	x = 986;
+	y = 1066;
+	z = 714;
+	sum = w + x + y + z;
+	cout << "The sum of those number is: " << i << "." << endl << "The average of those number is: "
+		<< sum / 4 << endl;
+	//system("pause");
+	return 0;
+}
+//output should be following
+
+/*The sum of those number is: 3344.
+The average of those number is: 836
+Press any key to continue . . .
+*/
